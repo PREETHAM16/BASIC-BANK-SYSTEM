@@ -51,7 +51,6 @@ app.post('/PRbank/transtable',(req,res)=>{
                     console.log('updated senders balance',result2);
                         let d = new Date();
                         let Time = d.toTimeString();
-                        console.log(Time);
                     transhist.create(
                         {
                             from:result2.name,
