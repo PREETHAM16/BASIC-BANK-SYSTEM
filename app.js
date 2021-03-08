@@ -3,7 +3,7 @@ const bp=require('body-parser');
 const mongoose=require('mongoose');
 const customer=require('./models/customerDetails.js');
 const transhist=require('./models/transactionHistory.js');
-const port=process.env.port || 1234;
+const port=Process.env.port || 1234;
 const app=express();
 app.set('view engine','ejs');
 app.use(express.static('./public'));
