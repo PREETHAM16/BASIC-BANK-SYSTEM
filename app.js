@@ -3,7 +3,7 @@ const bp=require('body-parser');
 const mongoose=require('mongoose');
 const customer=require('./models/customerDetails.js');
 const transhist=require('./models/transactionHistory.js');
-
+const port=process.env.port || 1234;
 const app=express();
 app.set('view engine','ejs');
 app.use(express.static('./public'));
@@ -11,7 +11,7 @@ app.use(bp.urlencoded({extended:false}));
 //connect to mangodb
 const dburl='mongodb+srv://preetham:preetham@12@cluster0.1zuno.mongodb.net/bank?retryWrites=true&w=majority';
 mongoose.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true})
-.then((result)=>app.listen(1234,()=>{console.log('Running at port number 1234')}))
+.then((result)=>app.listen(port,()=>{console.log('Running at port number 1234')}))
 .catch((err)=>console.log(err));
 
 app.get('/PRbank/home',(req,res)=>{
