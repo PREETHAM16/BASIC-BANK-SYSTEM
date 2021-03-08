@@ -49,7 +49,9 @@ app.post('/PRbank/transtable',(req,res)=>{
                 customer.findOneAndUpdate({accountNumber:req.body.sendersAccNo},{currentBalance:req.body.sendersBalance-val})
                 .then((result2)=>{
                     console.log('updated senders balance',result2);
-                    let Time= new Date().toTimeString().replace(/.(\d{2}:\d{2}:\d{2})./, "$1");
+                        let d = new Date();
+                        let Time = d.toTimeString();
+                        console.log(Time);
                     transhist.create(
                         {
                             from:result2.name,
