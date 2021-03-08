@@ -1,0 +1,75 @@
+<html>
+    <head><title>Transaction</title></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <header><%- include('header') %></header>
+        <style>
+            tr{
+                height:100px;
+            }
+            th{
+                text-align: center;
+            }
+            td{
+                text-align: center;
+                background-color: rgb(104, 1, 61);
+            }
+            input{
+                text-align: center;
+                width:50%;
+                margin-top:3%;
+            }
+            #submit{
+                background-color: darkgreen;
+                height:10%;
+                width:30%;
+                color: rgb(247, 247, 247);
+                font-weight: bolder;
+            }
+            #submit:hover{
+                color:white;
+                background-color: darkred;
+            }
+        </style>
+    <body>
+        <div class='me'>
+            <marquee  direction="up">Created by <br> PREETHAM REDDY</marquee>
+        </div>
+        <div class='main'>
+            <h1 class='h11' style='margin-bottom:3%;'>TRANSACTION</h1>
+            <form action="/PRbank/transtable" method='POST'   >
+                <table class='table container-fluid'>
+                    <tr >
+                        <th style='background-color:black;color:white;'>SENDER NAME</th>
+                        <td><input class='inp' style='font-weight:bold'; name='sendersName' value=<%= cusdet[index].name %> readonly></td>
+                    </tr>
+                    <tr >
+                        <th style='background-color:black;color:white;'>EMAIL</th>
+                        <td><input class='inp' style='font-weight:bold'; name='email' value=<%= cusdet[index].email %> readonly></td>
+                    </tr>
+                    <tr >
+                        <th style='background-color:black;color:white;'>SENDERS ACCOUNT NUMBER</th>
+                        <td><input class='inp' style='font-weight:bold'; name='sendersAccNo' value=<%= cusdet[index].accountNumber %> readonly></td>
+                    </tr>
+                    <tr >
+                        <th style='background-color:black;color:white;'>SENDERS BALANCE</th>
+                        <td><input class='inp' style='font-weight:bold'; name='sendersBalance' value=<%= cusdet[index].currentBalance %> readonly></td>
+                    </tr>
+                    <tr>
+                        <th style='background-color:black;color:white;'>TRANSFER TO</th>
+                        <td><input class='inp' type='text' name='receiversAccNo'  pattern=^[P][R][0-9]{3}$ autocomplete='off' required></td>
+                    </tr>
+                    <tr>
+                        <th style='background-color:black;color:white;'>AMOUNT</th>
+                        <td><input class='inp' type='number' min=2000 max=<%= cusdet[index].currentBalance %> name='amount' autocomplete='off' required></td>
+                    </tr>
+                </table>
+                <button class='btn' type="submit" id='submit' style='font-size: x-large;'>SUBMIT</button>
+                </form>
+        </div>
+    </body>
+</html>

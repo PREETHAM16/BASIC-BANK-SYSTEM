@@ -1,0 +1,181 @@
+@media(min-width:989px){
+    body{
+        text-align: center;
+        max-width:100%;
+    }
+    .h11{
+        color:rgb(104, 1, 61);
+        position: relative;
+        top:10%;
+        bottom:2%;
+        right:-8%;
+    }
+    .h41{
+        text-align:left;
+        float: right;
+        color:black;
+        margin-top:5.5%;
+        margin-left:5%;
+        width:45%;
+        position:relative;
+        z-index: 1;
+        font-family: Garamond, serif;
+    }
+    .h42{
+        margin-top:6%;
+        float:left;
+        width:45%;
+        text-align:left;
+        position: relative;
+        margin-left:2%;
+        margin-right:0%;
+        font-family: Garamond, serif;
+    }
+    #hoimg{
+        margin-top:2%;
+        margin-right:0%;
+        height:42%;
+        width:37%;
+    }
+    .cardimg{
+        position: relative;
+        left:3%;
+        margin-top:5%;
+        margin-bottom: 3%;
+    }
+    nav{
+        background-color:rgb(104, 1, 61);
+        margin-top:0%;
+        height:8%;
+    }
+    
+    .nava{
+        position: fixed;
+        z-index: 2;
+        width:100%;
+    }
+    li{
+        position: relative;
+        letter-spacing:0.3em;
+        padding-right:30px;
+        right:30%;
+        color:rgb(255, 255, 255);
+      }
+    .nla:hover{
+    position:relative;
+    font-size:larger;
+    }
+    .main{
+        position: relative;
+        top:10%;
+        padding-bottom:5%;
+    }
+    .me{
+        position:sticky;
+        top:0;
+        float:right;
+       z-index:3;
+       right:0%;
+       color: white;
+       width:12%;
+    }
+    .h31{
+        position: relative;
+        right:20%;
+    }
+    .h32{
+        margin-bottom:1%;
+        color: rgb(3, 31, 109);
+    }    
+    .container-fluid{
+        width:70%;
+    }
+    .ico{
+        position: relative;
+        cursor: pointer;
+    }
+    .ico:hover{
+        top:-8px;
+    }
+}
+@media(max-width:988px){
+    body{
+        text-align: center;
+        margin-bottom:8%;
+    }
+    .h11{
+        color:rgb(104, 1, 61);
+        text-align:center;
+        }
+    .h42,.h41{
+        position: relative;
+        font-size:35px;
+        margin-left:2%;
+        margin-right:2%;
+        margin-top:15%;
+        z-index:2;
+        text-align: center;
+        font-family: Garamond, serif;
+        }
+    #hoimg{
+        text-align:center;
+        height:25%;
+        width:70%;
+    }
+    .cardimg{
+        position: relative;
+        margin-top:50%;
+        }
+    nav{
+        background-color:rgb(83, 3, 50);
+        margin-top:0%;
+        height:20%;
+        }
+    .nava{
+        position: fixed;
+        z-index:5;
+        width:100%;
+        }
+        li{
+            position: relative;
+            letter-spacing:0.3em;
+            padding-right:30px;
+            right:0%;
+            color:rgb(255, 255, 255);
+            background-color: black;
+            font-size:30px;
+            height:100px;
+            width:100%;
+              }
+              .navbar-toggler{
+                  width:150px;
+                  height:50px;
+                  font-weight: bolder;
+                  background-color: black;
+              }
+              .navbar-toggler-icon{
+                  font-size: xx-large;
+                  font-weight: bolder;
+              }
+            .nla:hover{
+            position:relative;
+            top:-5%;
+            }
+            .me{
+                display:none;
+            }
+            .pr{
+                font-size:50px;
+            }
+            .main{
+               position: relative;
+               top: 25%;
+            }
+            .container-fluid{
+                width:100%;
+                font-size:32px;
+            }
+            .inp{
+                width:60%;
+            }
+}

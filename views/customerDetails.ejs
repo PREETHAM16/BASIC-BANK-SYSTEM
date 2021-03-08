@@ -1,0 +1,46 @@
+<html>
+    <head><title>Customer Details</title></head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <header><%- include('header') %></header>
+    <body>
+        <div class='me'>
+            <marquee  direction="up">Created by <br> PREETHAM REDDY</marquee>
+        </div>
+        <div class='main'>
+        <h1 class='h11'>CUSTOMER DETAILS</h1>
+        <h3 class='h32'>Click on the particular user row to make transactions</h3>
+        <table class="table container-fluid">
+            <tr style='background-color:black;color:white;'>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Account Number</th>
+                <th>Balance</th>
+            </tr>
+            <% let len=cusdet.length %>
+            <% for(let k=0;k<len;k++){ %>
+                <form action="/PRbank/transaction/<%= k %>" method='POST'  id=<%= k %>  >
+                    <tr onclick="submit(<%= k %>)"style='cursor: pointer;color:white;
+background: rgb(125,5,84);
+background: radial-gradient(circle, rgba(125,5,84,1) 50%, rgba(0,88,193,1) 100%);'>
+                        <td><%= k+1 %></td>
+                        <td><%= cusdet[k].name %></td>
+                        <td><%= cusdet[k].email %></td>
+                        <td><%= cusdet[k].accountNumber %></td>
+                        <td>₹ <%= cusdet[k].currentBalance %></td>
+                    </tr></form>
+            <% } %>
+            
+        </div>
+    </body>
+    <script>
+        function submit(k){
+            document.getElementById(k).submit();
+        }
+    </script>
+</html>
