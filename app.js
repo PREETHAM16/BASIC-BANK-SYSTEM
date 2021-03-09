@@ -49,8 +49,9 @@ app.post('/PRbank/transtable',(req,res)=>{
                 customer.findOneAndUpdate({accountNumber:req.body.sendersAccNo},{currentBalance:req.body.sendersBalance-val})
                 .then((result2)=>{
                     console.log('updated senders balance',result2);
-                        let d = new Date();
-                        let Time = d.toTimeString();
+                    // let Time = new Date().toLocaleString("en-US",{timeZone:'Asia/Kolkata',timeStyle:'medium',hourCycle:'h24'});
+                    let date=new Date().toLocaleString("en-US",{timeZone:'Asia/Kolkata'});
+                    console.log(date);
                     transhist.create(
                         {
                             from:result2.name,
@@ -58,7 +59,7 @@ app.post('/PRbank/transtable',(req,res)=>{
                             to:result1.name,
                             accNoT:result1.accountNumber,
                             amount:req.body.amount,
-                            time:Time
+                            time:date
                         }).then((result3)=>{
                         console.log('Transaction history table Created');
                         res.redirect('/PRbank/customerDetails');
@@ -73,7 +74,10 @@ app.post('/PRbank/transtable',(req,res)=>{
 
 app.get('/PRbank/customerTransactions',(req,res)=>{
     transhist.find()
-    .then((result)=>res.render('transactionTable',{transaction:result}))
+    .then((result)=>{console.log('Transaction history',result);
+        res.render('transactionTable',{transaction:result});
+        
+    })
     .catch((err)=>console.log(err));
 });
 //dataBase Insertion

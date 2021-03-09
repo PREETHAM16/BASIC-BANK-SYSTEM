@@ -14,9 +14,9 @@
         text-align:left;
         float: right;
         color:black;
-        margin-top:5.5%;
-        margin-left:5%;
-        width:45%;
+        margin-top:4%;
+        margin-right:3%;
+        width:50%;
         position:relative;
         z-index: 1;
         font-family: Garamond, serif;
@@ -38,10 +38,21 @@
         width:37%;
     }
     .cardimg{
-        position: relative;
-        left:3%;
-        margin-top:5%;
-        margin-bottom: 3%;
+        position: absolute;
+        bottom:-2%;
+        margin-left:8%;
+    }
+    .main{
+        position:absolute;
+        display: block;
+        top:10%;
+        margin-bottom:15%;
+        padding-bottom:5%;
+    }
+    .last{
+        position:absolute;
+        display: block;
+        margin-top:30%;
     }
     nav{
         background-color:rgb(104, 1, 61);
@@ -64,11 +75,6 @@
     .nla:hover{
     position:relative;
     font-size:larger;
-    }
-    .main{
-        position: relative;
-        top:10%;
-        padding-bottom:5%;
     }
     .me{
         position:sticky;
@@ -97,6 +103,18 @@
     .ico:hover{
         top:-8px;
     }
+    .bord{
+        text-align:center;
+        border-top:5px solid rgb(168, 17, 105);
+        border-bottom:5px solid rgb(168, 10, 102);   
+    }
+    footer{
+        position:absolute;
+        text-align: center;
+        top:100%;
+        left:15%;
+        margin-bottom:0%;
+    }
 }
 @media(max-width:988px){
     body{
@@ -119,12 +137,13 @@
         }
     #hoimg{
         text-align:center;
+        margin-top:35%;
         height:25%;
         width:70%;
     }
     .cardimg{
         position: relative;
-        margin-top:50%;
+        margin-top:15%;
         }
     nav{
         background-color:rgb(83, 3, 50);
@@ -177,5 +196,14 @@
             }
             .inp{
                 width:60%;
+            }
+            .bord{
+                text-align:center;
+                border-top:5px solid rgb(168, 17, 105);
+                border-bottom:5px solid rgb(168, 10, 102);   
+            }
+            footer{
+                position: relative;
+                bottom:2%;
             }
 }

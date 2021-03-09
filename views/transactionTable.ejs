@@ -30,12 +30,17 @@
                 <th>Time</th>
             </tr>
             <% for(i=0;i<transaction.length;i++){
-                const monthNames=['01', '02', '03', '04', '05','06','07', '08', '09', '10', '11','12'] 
-                const dateObj =transaction[i].createdAt
-                const month = monthNames[dateObj.getMonth()]
-                const day = String(dateObj.getDate()).padStart(2, '0')
-                const year = dateObj.getFullYear()
-                const date=  day+'-'+month+'-'+year                    
+                let space =transaction[i].time.split(" ");
+                let comma=space[0].split(',');
+                let slash=comma[0].split('/');
+                console.log(slash);
+                let month,day,year;
+                if(slash[0]>='1' && slash[0]<='9')month='0'+slash[0];
+                else month=slash[0];
+                if(slash[1]>='1' &&  slash[0]<='9')day='0'+slash[1];
+                else day=slash[1];
+                 year = slash[2];
+                const date= day+'-'+month+'-'+year;                    
             %>
             <tr style='background: rgb(125,5,84);
             background: radial-gradient(circle, rgba(125,5,84,1) 50%, rgba(0,88,193,1) 100%)';>
@@ -45,7 +50,7 @@
                 <td><%= transaction[i].to %></td>
                 <td><%= transaction[i].accNoT %></td>
                 <td><%= date %></td>
-                <td><%= transaction[i].time.substring(0,8) %></td>
+                <td><%= space[1]+' '+space[2] %></td>
             </tr>
             <% } %>
         </table>
