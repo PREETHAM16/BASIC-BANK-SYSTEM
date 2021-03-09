@@ -180,13 +180,15 @@
         }
         li{
             position: relative;
+            z-index:6;
             letter-spacing:0.3em;
             padding-right:30px;
             right:0%;
+            bottom:88%;
             color:rgb(255, 255, 255);
             background-color: black;
-            font-size:30px;
-            height:100px;
+            font-size:15px;
+            height:120px;
             width:100%;
               }
               .navbar-toggler{
@@ -207,15 +209,15 @@
             .me{
                 position: fixed;
                 display: block;
-                z-index:6;
-                color: rgb(190, 190, 190);
-                bottom:90%;
-                margin-left:40%;
+                z-index:5;
+                color: rgb(192, 192, 192);
+                top:0%;
+                margin-left:30%;
                 font-size:35px;
             }
             span{
                 font-size: large;
-                color: #fdfdfd;  
+                color: #ffffff;  
                 font-size:40px; 
             }
             .pr{
