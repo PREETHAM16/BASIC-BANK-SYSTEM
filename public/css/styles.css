@@ -4,6 +4,7 @@
         max-width:100%;
     }
     .h11{
+        text-align: center;
         color:rgb(104, 1, 61);
         position: relative;
         top:10%;
@@ -48,6 +49,17 @@
         top:10%;
         margin-bottom:15%;
         padding-bottom:5%;
+    }
+    .h111{
+        
+        color:rgb(104, 1, 61);
+        margin-left:-5%;
+    }
+    .main1{
+        width:70%;
+        position:absolute;
+        margin-top:7%;
+        margin-left:15%;
     }
     .last{
         position:absolute;
@@ -94,8 +106,9 @@
         color: rgb(3, 31, 109);
     }    
     .container-fluid{
-        width:70%;
+        text-align: center;
     }
+
     .ico{
         position: relative;
         cursor: pointer;
@@ -111,8 +124,8 @@
     footer{
         position:absolute;
         text-align: center;
+        width:70%;
         top:100%;
-        left:15%;
         margin-bottom:0%;
     }
 }
@@ -190,6 +203,13 @@
                position: relative;
                top: 25%;
             }
+            .h111{
+                color:rgb(83, 3, 50);
+            }
+            .main1{
+                position: relative;
+                top: 25%;
+             }
             .container-fluid{
                 width:100%;
                 font-size:32px;
