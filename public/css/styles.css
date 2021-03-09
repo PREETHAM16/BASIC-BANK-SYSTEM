@@ -96,8 +96,12 @@
         float:right;
        z-index:3;
        right:0%;
-       color: white;
+       color: rgb(173, 173, 173);
        width:12%;
+    }
+    span{
+        font-size: large;
+        color: #fdfdfd;   
     }
     .h31{
         position: relative;
