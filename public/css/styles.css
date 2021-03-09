@@ -88,14 +88,16 @@
       }
     .nla:hover{
     position:relative;
-    font-size:larger;
+    background-color: rgb(9, 40, 122);
+    border-radius:360px;
+    color: black;
     }
     .me{
         position:absolute;
         display:block;
         float:right;
        z-index:3;
-       right:0%;
+       right:-2%;
        top:2%;
        color: rgb(173, 173, 173);
        width:12%;
@@ -103,6 +105,7 @@
     span{
         font-size: large;
         color: #fdfdfd;   
+        font-weight:600;
     }
     .h31{
         position: relative;
@@ -195,7 +198,6 @@
                   position: fixed;
                   right:1%;
                   width:100px;
-                  height:100%;
                   font-weight: bolder;
               }
               .navbar-toggler-icon{
@@ -216,9 +218,9 @@
                 font-size:35px;
             }
             span{
-                font-size: large;
                 color: #ffffff;  
                 font-size:40px; 
+                font-weight:600;
             }
             .pr{
                 font-size:50px;
