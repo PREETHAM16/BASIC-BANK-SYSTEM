@@ -17,6 +17,10 @@ mongoose.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true})
 app.get('/PRbank/home',(req,res)=>{
     res.render('home.ejs');
 });
+app.get('/',(req,res)=>{
+    res.redirect('/PRbank/home');
+});
+
 function customerDet(res,i){
     customer.find().
     then((result)=>{
