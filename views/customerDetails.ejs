@@ -25,9 +25,7 @@
             <% let len=cusdet.length %>
             <% for(let k=0;k<len;k++){ %>
                 <form action="/PRbank/transaction/<%= k %>" method='POST'  id=<%= k %>  >
-                    <tr onclick="submit(<%= k %>)"style='cursor: pointer;color:white;
-background: rgb(125,5,84);
-background: radial-gradient(circle, rgba(125,5,84,1) 50%, rgba(0,88,193,1) 100%);'>
+                    <tr class="userclick" onclick="submit(<%= k %>)">
                         <td><%= k+1 %></td>
                         <td><%= cusdet[k].name %></td>
                         <td><%= cusdet[k].email %></td>
