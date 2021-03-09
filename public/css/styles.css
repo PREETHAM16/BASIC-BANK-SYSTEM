@@ -130,14 +130,6 @@
         top:100%;
         margin-bottom:0%;
     }
-    .userclick{
-        cursor:pointer;color:white;
-background: rgb(125,5,84);
-background: radial-gradient(circle, rgba(125,5,84,1) 50%, rgb(0, 104, 190) 100%);
-    }
-    .userclick:hover{
-        background:rgb(2, 48, 104);
-    }
 }
 @media(max-width:988px){
     body{
@@ -240,7 +232,14 @@ background: radial-gradient(circle, rgba(125,5,84,1) 50%, rgb(0, 104, 190) 100%)
             }
 }
 
-
+.userclick{
+    cursor:pointer;color:white;
+background: rgb(125,5,84);
+background: radial-gradient(circle, rgba(125,5,84,1) 50%, rgb(0, 104, 190) 100%);
+}
+.userclick:hover{
+    background:rgb(2, 48, 104);
+}
 @keyframes swing {
     0%{
         transform: rotateY(0deg);
