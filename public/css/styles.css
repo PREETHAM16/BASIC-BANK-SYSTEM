@@ -184,26 +184,32 @@
         }
         li{
             position: relative;
+            top:5%;
             z-index:6;
             letter-spacing:0.3em;
-            padding-right:30px;
+            text-align:center;
             right:0%;
-            bottom:88%;
+            margin-left:-2%;
             color:rgb(255, 255, 255);
             background-color: black;
             font-size:15px;
-            height:120px;
+            height:130px;
             width:100%;
               }
               .navbar-toggler{
                   position: fixed;
-                  right:1%;
+                  right:4%;
                   width:100px;
+                  padding-bottom:2%;
                   font-weight: bolder;
+                  outline: none;
               }
               .navbar-toggler-icon{
-                  font-size:60px;
+                  font-size:70px;
+                  margin-right:4%;
                   font-weight: bolder;
+                  outline: none;
+                  width:120%;
               }
             .nla:hover{
             position:relative;
