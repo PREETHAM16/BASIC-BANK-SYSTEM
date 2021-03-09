@@ -14,12 +14,16 @@ mongoose.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true})
 .then((result)=>app.listen(port,()=>{console.log('Running at port number 1234')}))
 .catch((err)=>console.log(err));
 
+app.use("/favicon.ico", express.static('public/favicon.ico'));
+
 app.get('/PRbank/home',(req,res)=>{
     res.render('home.ejs');
 });
 app.get('/',(req,res)=>{
     res.redirect('/PRbank/home');
 });
+
+
 
 function customerDet(res,i){
     customer.find().
