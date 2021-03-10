@@ -23,8 +23,6 @@ app.get('/',(req,res)=>{
     res.redirect('/PRbank/home');
 });
 
-
-
 function customerDet(res,i){
     customer.find().
     then((result)=>{
