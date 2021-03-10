@@ -94,7 +94,7 @@
     color: black;
     }
     .me{
-        position:absolute;
+        position:fixed;
         display:block;
         float:right;
        z-index:3;
